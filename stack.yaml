@@ -1,0 +1,9 @@
+resolver: lts-10.4
+
+packages:
+- .
+
+nix:
+  pure: true
+  packages:
+  - llvm_39
