@@ -11,10 +11,30 @@ category:            Web
 extra-source-files:
 - README.md
 
+default-extensions:
+  - ApplicativeDo
+  - RecordWildCards
+  - LambdaCase
+  - NoImplicitPrelude
+  - OverloadedLists
+  - OverloadedStrings
+  - ScopedTypeVariables
+  
+ghc-options:
+  - -fllvm
+  - -threaded
+  - -W
+
 dependencies:
   - base >= 4.7 && < 5
+  - filepath
+  - filemanip
+  - mono-traversable
+  - optparse-applicative
+  - process
+  - universum
 
 executables:
-  nixtools:
+  nixtools-rebuild:
     source-dirs:      src
-    main:             Main.hs
+    main:             Rebuild.hs
